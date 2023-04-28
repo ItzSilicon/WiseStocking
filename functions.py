@@ -8,12 +8,12 @@ import glob
 import os
 
 
-def loadConfig():
+def loadataConfig():
     fd = open("Config.json", 'r', encoding="utf-8")
-    d = fd.read()
-    Set = json.loads(d)
+    data = fd.read()
+    Setting = json.loads(data)
     fd.close()
-    return Set
+    return Setting
 
 
 def GetWebContent(URL):  # get html content
