@@ -6,35 +6,96 @@ import yfinance as yf
 import json
 import glob
 import os
+from time import ctime
 
 
-def loadataConfig():
+class log:
+    def __init__(self):
+        self.time = ctime()
+        self.fd = open("log.txt", "a", encoding="utf-8")
+        
+    def write(self, msg):
+        print(msg)
+        self.fd.write(f"[PRINT] [{self.time}] {msg}\n")
+        
+    def error(self, msg):
+        self.write("Something went wrong,please check the log file.")
+        self.fd.write(f"[ERROR] [{self.time}] {msg}\n")
+        
+    def info(self, msg):
+        self.fd.write(f"[INFO] [{self.time}] {msg}\n")
+        
+    def debug(self, msg):
+        self.fd.write(f"[DEBUG] [{self.time}] {msg}\n")
+        
+    def warning(self, msg):
+        self.fd.write(f"[WARNING] [{self.time}] {msg}\n")
+        
+    def __del__(self):
+        self.fd.close()
+
+global logger
+logger=log()
+def load_data_config():
+    logger=log()
+    """載入初值設定
+
+    Returns:
+        dict: 初值設定，以字典形式儲存
+    """
+    logger.info("Loading Config.json...")
     fd = open("Config.json", 'r', encoding="utf-8")
     data = fd.read()
-    Setting = json.loads(data)
+    setting = json.loads(data)
     fd.close()
-    return Setting
+    logger.info("Config.json loaded successfully.")    
+    return setting
 
 
-def GetWebContent(URL):  # get html content
+def get_web_content(URL):
+    """
+    擷取網頁資料
+    Args:
+        URL (str): 輸入網址
+
+    Returns:
+        Response: 回傳網頁資料
+    """
     Content = requests.get(URL)
     return Content.text
 
 
-def Getstockwebinfo(code):  # get stock info on tw.stock.yahoo
-    stockweb = GetWebContent(f'https://tw.stock.yahoo.com/quote/{code}')
+def get_stockweb_info(code):  # get stock info on tw.stock.yahoo
+    """
+    擷取tw.stock.yahoo資料
+    Args:
+        code (str): 輸入股票代碼，作為網址的一部份
+
+    Returns:
+        str: 回傳該頁面資料
+    """
+    stockweb = get_web_content(f'https://tw.stock.yahoo.com/quote/{code}')
     return stockweb
 
 
-def Htmlize(web):  # Turn content into html format
+def htmlize(web):  # Turn content into html format
+    """
+    格式化HTML
+
+    Args:
+        web (str): 網頁原始碼
+
+    Returns:
+        str: 格式化後的網頁原始碼
+    """
     return BeautifulSoup(web, 'html.parser')
 
 
-def GetElm(web, Elm):  # find element from html
-    return Htmlize(web).find(Elm)
+def get_elm(web, elm):  # find element from html
+    return htmlize(web).find(elm)
 
 
-def GetRealtimePrice(id):  # get realtime info by entering stock code
+def get_realtime_price(id):  # get realtime info by entering stock code
     return twstock.realtime.get(id)
 
 
@@ -50,14 +111,15 @@ def getstockinfo(code):
     return (info)
 
 
-def update(code):
+def update(code:str):
     try:
-        D = getstockinfo(f"{code}.tw")
-    except:
+        data = getstockinfo(f"{code}.tw")
+    except requests.exceptions.HTTPError as e:
+        print(e)
         return None
-    S = json.dumps(D)
-    with open(f"StockLibrary/{code}.json", "w") as f:
-        f.write(S)
+    S = json.dumps(data)
+    with open(f"StockLibrary/{code}.json", "w",encoding="utf-8") as fd:
+        fd.write(S)
         print(f"{code}.json Updated.")
 
 
@@ -80,3 +142,4 @@ def importinfo():
                     k.write(G)
         except KeyError:
             continue
+
