@@ -1,9 +1,5 @@
-from Functions import getstockinfo
+from functions import getstockinfo
 import json,glob,os
-
-
-        
-        
 
 
 def update(code):
