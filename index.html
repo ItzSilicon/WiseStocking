@@ -1,19 +1,63 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <title>
-            WiseStocking
-        </title>
-        <body>
-            <h1 align="center">歡迎使用智能診股</h1>
-            <hr>
-            <p>請輸入股票代碼:</p>
-            <br>
-            <input type="text" value="2330" name="syb">
-            <div>
 
-            </div>
-        </body>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>WiseStocking</title>
+    <style>
+        h1 {
+            font-size: 200%;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 150%;
+            text-align: center;
+            line-height: 30pt;
+        }
+
+        #code {
+            background-color: transparent;
+            border: transparent;
+            text-align: center;
+            line-height: 30pt;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+                "Lucida Sans", Arial, sans-serif;
+            margin:0;
+            font-size: 125%;
+        }
+
+        .sub{
+            background-color: rgba(0,0,0,0.5);
+            border:0;
+            color:white;
+            font-size: 100%;
+
+        }
+        .sub:hover{
+            background-color: rgba(255,255,255,0.5);
+            color:black;
+        }
+
+        #put{
+            text-align: center;
+
+        }
+    </style>
+
+<body>
+    <h1>歡迎使用智能診股</h1>
+    <hr />
+    <h2>請輸入股票代碼:</h2>
+    <form>
+        <p id="put">
+            <input type="text" value="2330" name="syb" id="code" /><br>
+            <input type="submit" value="查詢" name="syb" class="sub" />
+        </p>
+    </form>
+    <div></div>
+</body>
+</head>
+
+</html>

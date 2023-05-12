@@ -1,0 +1,252 @@
+[Fri May  5 15:58:08 2023] [INFO] Importing functions...
+[Fri May  5 15:58:08 2023] [INFO] The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os
+[Fri May  5 15:58:09 2023] [INFO] Import functions successfully.
+[Fri May  5 15:58:09 2023] [INFO] Getting realtime info by entering stock code 2330...
+[Fri May  5 15:58:09 2023] [INFO] Getting realtime info by entering stock code 2330 successfully.
+[Fri May  5 15:58:09 2023] [INPUT] Enter stock code or a command with '/':
+
+[Fri May  5 15:58:09 2023] [DEBUG] The input is: 2330
+[Fri May  5 15:58:09 2023] [PRINT] Getting stock infomation...
+[Fri May  5 15:58:09 2023] [PRINT] Arranging stock infomation...
+[Fri May  5 15:58:09 2023] [PRINT] 
+Code: 2330
+Cooperation/Stock Name: 台積電 (台灣積體電路製造股份有限公司)
+Closing time: 2023-05-05 14:30:00
+Price(per stock): 500.0
+Volume: 1421
+Accumulate Volume: 7454
+Opening Price: 500.0
+Highest: 502.0
+Lowest: 498.5
+
+[Fri May  5 15:58:57 2023] [INFO] Importing functions...
+[Fri May  5 15:58:57 2023] [INFO] The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os
+[Fri May  5 15:58:58 2023] [INFO] Import functions successfully.
+[Fri May  5 15:58:58 2023] [INFO] Getting realtime info by entering stock code 6547...
+[Fri May  5 15:58:58 2023] [INFO] Getting realtime info by entering stock code 6547 successfully.
+[Fri May  5 15:58:58 2023] [INPUT] Enter stock code or a command with '/':
+
+[Fri May  5 15:58:58 2023] [DEBUG] The input is: 6547
+[Fri May  5 15:58:58 2023] [PRINT] Getting stock infomation...
+[Fri May  5 15:58:58 2023] [PRINT] Arranging stock infomation...
+[Fri May  5 15:58:58 2023] [PRINT] 
+Code: 6547
+Cooperation/Stock Name: 高端疫苗 (高端疫苗生物製劑股份有限公司)
+Closing time: 2023-05-05 14:30:00
+Price(per stock): 65.5
+Volume: 205
+Accumulate Volume: 3230
+Opening Price: 64.0
+Highest: 66.6
+Lowest: 63.6
+
+[Fri May  5 15:59:31 2023] [INFO] Importing functions...
+[Fri May  5 15:59:31 2023] [INFO] The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os
+[Fri May  5 15:59:32 2023] [INFO] Import functions successfully.
+[Fri May  5 15:59:32 2023] [INFO] Getting realtime info by entering stock code 9879...
+[Fri May  5 15:59:32 2023] [INFO] Getting realtime info by entering stock code 9879 successfully.
+[Fri May  5 15:59:32 2023] [INPUT] Enter stock code or a command with '/':
+
+[Fri May  5 15:59:32 2023] [DEBUG] The input is: 9879
+[Fri May  5 15:59:32 2023] [PRINT] Getting stock infomation...
+[Fri May  5 15:59:32 2023] [PRINT] Arranging stock infomation...
+[Fri May  5 15:59:32 2023] [PRINT] Something went wrong,please check the log file.
+[Fri May  5 15:59:32 2023] [ERROR] The stock code 9879 is not exist.
+[Fri May  5 15:59:34 2023] [INFO] Importing functions...
+[Fri May  5 15:59:34 2023] [INFO] The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os
+[Fri May  5 15:59:35 2023] [INFO] Import functions successfully.
+[Fri May  5 15:59:35 2023] [INFO] Getting realtime info by entering stock code 8497...
+[Fri May  5 15:59:35 2023] [INFO] Getting realtime info by entering stock code 8497 successfully.
+[Fri May  5 15:59:35 2023] [INPUT] Enter stock code or a command with '/':
+
+[Fri May  5 15:59:35 2023] [DEBUG] The input is: 8497
+[Fri May  5 15:59:35 2023] [PRINT] Getting stock infomation...
+[Fri May  5 15:59:35 2023] [PRINT] Arranging stock infomation...
+[Fri May  5 15:59:35 2023] [PRINT] Something went wrong,please check the log file.
+[Fri May  5 15:59:35 2023] [ERROR] The stock code 8497 is not exist.
+[Fri May  5 15:59:38 2023] [INFO] Importing functions...
+[Fri May  5 15:59:38 2023] [INFO] The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os
+[Fri May  5 15:59:38 2023] [INFO] Import functions successfully.
+[Fri May  5 15:59:38 2023] [INFO] Getting realtime info by entering stock code 6588...
+[Fri May  5 15:59:38 2023] [INFO] Getting realtime info by entering stock code 6588 successfully.
+[Fri May  5 15:59:38 2023] [INPUT] Enter stock code or a command with '/':
+
+[Fri May  5 15:59:38 2023] [DEBUG] The input is: 6588
+[Fri May  5 15:59:38 2023] [PRINT] Getting stock infomation...
+[Fri May  5 15:59:38 2023] [PRINT] Arranging stock infomation...
+[Fri May  5 15:59:38 2023] [PRINT] 
+Code: 6588
+Cooperation/Stock Name: 東典光電 (東典光電科技股份有限公司)
+Closing time: 2023-05-05 14:30:00
+Price(per stock): 30.15
+Volume: 1
+Accumulate Volume: 9
+Opening Price: 30.55
+Highest: 30.6
+Lowest: 30.15
+
+[Fri May  5 15:59:52 2023] [INFO] Importing functions...
+[Fri May  5 15:59:52 2023] [INFO] The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os
+[Fri May  5 15:59:53 2023] [INFO] Import functions successfully.
+[Fri May  5 15:59:53 2023] [INFO] Getting realtime info by entering stock code 3310...
+[Fri May  5 15:59:53 2023] [INFO] Getting realtime info by entering stock code 3310 successfully.
+[Fri May  5 15:59:53 2023] [INPUT] Enter stock code or a command with '/':
+
+[Fri May  5 15:59:53 2023] [DEBUG] The input is: 3310
+[Fri May  5 15:59:53 2023] [PRINT] Getting stock infomation...
+[Fri May  5 15:59:53 2023] [PRINT] Arranging stock infomation...
+[Fri May  5 15:59:53 2023] [PRINT] 
+Code: 3310
+Cooperation/Stock Name: 佳穎 (佳穎精密企業股份有限公司)
+Closing time: 2023-05-05 14:30:00
+Price(per stock): 67.5
+Volume: 15
+Accumulate Volume: 43
+Opening Price: 66.7
+Highest: 67.5
+Lowest: 66.1
+
+[Fri May  5 16:00:01 2023] [INFO] Importing functions...
+[Fri May  5 16:00:01 2023] [INFO] The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os
+[Fri May  5 16:00:02 2023] [INFO] Import functions successfully.
+[Fri May  5 16:00:02 2023] [INFO] Getting realtime info by entering stock code 2330...
+[Fri May  5 16:00:02 2023] [INFO] Getting realtime info by entering stock code 2330 successfully.
+[Fri May  5 16:00:02 2023] [INPUT] Enter stock code or a command with '/':
+
+[Fri May  5 16:00:02 2023] [DEBUG] The input is: 2330
+[Fri May  5 16:00:02 2023] [PRINT] Getting stock infomation...
+[Fri May  5 16:00:02 2023] [PRINT] Arranging stock infomation...
+[Fri May  5 16:00:02 2023] [PRINT] 
+Code: 2330
+Cooperation/Stock Name: 台積電 (台灣積體電路製造股份有限公司)
+Closing time: 2023-05-05 14:30:00
+Price(per stock): 500.0
+Volume: 1421
+Accumulate Volume: 7454
+Opening Price: 500.0
+Highest: 502.0
+Lowest: 498.5
+
+[Fri May  5 16:00:36 2023] [INFO] Importing functions...
+[Fri May  5 16:00:36 2023] [INFO] The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os
+[Fri May  5 16:00:37 2023] [INFO] Import functions successfully.
+[Fri May  5 16:00:37 2023] [INFO] Getting realtime info by entering stock code 6546...
+[Fri May  5 16:00:37 2023] [INFO] Getting realtime info by entering stock code 6546 successfully.
+[Fri May  5 16:00:37 2023] [INPUT] Enter stock code or a command with '/':
+
+[Fri May  5 16:00:37 2023] [DEBUG] The input is: 6546
+[Fri May  5 16:00:37 2023] [PRINT] Getting stock infomation...
+[Fri May  5 16:00:37 2023] [PRINT] Arranging stock infomation...
+[Fri May  5 16:00:37 2023] [PRINT] 
+Code: 6546
+Cooperation/Stock Name: 正基 (正基科技股份有限公司)
+Closing time: 2023-05-05 14:30:00
+Price(per stock): 83.0
+Volume: 17
+Accumulate Volume: 199
+Opening Price: 83.4
+Highest: 83.4
+Lowest: 82.3
+
+[Fri May  5 16:00:41 2023] [INFO] Importing functions...
+[Fri May  5 16:00:41 2023] [INFO] The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os
+[Fri May  5 16:00:42 2023] [INFO] Import functions successfully.
+[Fri May  5 16:00:42 2023] [INFO] Generating random stock code 5168
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 5168...
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 5168 successfully.
+[Fri May  5 16:00:42 2023] [INFO] Generating random stock code 3864
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 3864...
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 3864 successfully.
+[Fri May  5 16:00:42 2023] [INFO] Generating random stock code 9801
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 9801...
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 9801 successfully.
+[Fri May  5 16:00:42 2023] [INFO] Generating random stock code 7846
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 7846...
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 7846 successfully.
+[Fri May  5 16:00:42 2023] [INFO] Generating random stock code 7128
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 7128...
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 7128 successfully.
+[Fri May  5 16:00:42 2023] [INFO] Generating random stock code 4660
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 4660...
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 4660 successfully.
+[Fri May  5 16:00:42 2023] [INFO] Generating random stock code 2305
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 2305...
+[Fri May  5 16:00:42 2023] [INFO] Getting realtime info by entering stock code 2305 successfully.
+[Fri May  5 16:00:42 2023] [INPUT] Enter stock code or a command with '/':
+
+[Fri May  5 16:00:42 2023] [DEBUG] The input is: /randstock
+[Fri May  5 16:00:42 2023] [PRINT] Generating random stock code...
+[Fri May  5 16:00:42 2023] [DEBUG] Stock code is not exist.
+[Fri May  5 16:00:42 2023] [DEBUG] Stock code is not exist.
+[Fri May  5 16:00:42 2023] [DEBUG] Stock code is not exist.
+[Fri May  5 16:00:42 2023] [DEBUG] Stock code is not exist.
+[Fri May  5 16:00:42 2023] [DEBUG] Stock code is not exist.
+[Fri May  5 16:00:42 2023] [DEBUG] Stock code is not exist.
+[Fri May  5 16:00:42 2023] [DEBUG] Stock code is exist.
+[Fri May  5 16:00:42 2023] [PRINT] Arranging stock infomation...
+[Fri May  5 16:00:42 2023] [PRINT] 
+Code: 2305
+Cooperation/Stock Name: 全友 (全友電腦股份有限公司)
+Closing time: 2023-05-05 14:30:00
+Price(per stock): 22.15
+Volume: 10
+Accumulate Volume: 141
+Opening Price: 22.1
+Highest: 22.5
+Lowest: 22.1
+
+[Fri May  5 16:00:56 2023] [INFO] Importing functions...
+[Fri May  5 16:00:56 2023] [INFO] The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os
+[Fri May  5 16:00:57 2023] [INFO] Import functions successfully.
+[Fri May  5 16:00:57 2023] [INFO] Generating random stock code 5629
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 5629...
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 5629 successfully.
+[Fri May  5 16:00:57 2023] [INFO] Generating random stock code 4002
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 4002...
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 4002 successfully.
+[Fri May  5 16:00:57 2023] [INFO] Generating random stock code 5765
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 5765...
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 5765 successfully.
+[Fri May  5 16:00:57 2023] [INFO] Generating random stock code 9655
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 9655...
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 9655 successfully.
+[Fri May  5 16:00:57 2023] [INFO] Generating random stock code 5130
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 5130...
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 5130 successfully.
+[Fri May  5 16:00:57 2023] [INFO] Generating random stock code 6576
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 6576...
+[Fri May  5 16:00:57 2023] [INFO] Getting realtime info by entering stock code 6576 successfully.
+[Fri May  5 16:00:57 2023] [INPUT] Enter stock code or a command with '/':
+
+[Fri May  5 16:00:57 2023] [DEBUG] The input is: /randstock
+[Fri May  5 16:00:57 2023] [PRINT] Generating random stock code...
+[Fri May  5 16:00:57 2023] [DEBUG] Stock code is not exist.
+[Fri May  5 16:00:57 2023] [DEBUG] Stock code is not exist.
+[Fri May  5 16:00:57 2023] [DEBUG] Stock code is not exist.
+[Fri May  5 16:00:57 2023] [DEBUG] Stock code is not exist.
+[Fri May  5 16:00:57 2023] [DEBUG] Stock code is not exist.
+[Fri May  5 16:00:57 2023] [DEBUG] Stock code is exist.
+[Fri May  5 16:00:57 2023] [PRINT] Arranging stock infomation...
+[Fri May  5 16:00:57 2023] [PRINT] 
+Code: 6576
+Cooperation/Stock Name: 逸達 (逸達生物科技股份有限公司)
+Closing time: 2023-05-05 14:30:00
+Price(per stock): 91.4
+Volume: 14
+Accumulate Volume: 396
+Opening Price: 91.7
+Highest: 92.6
+Lowest: 90.9
+
+[Fri May  5 16:01:30 2023] [INFO] Importing functions...
+[Fri May  5 16:01:30 2023] [INFO] The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os
+[Fri May  5 16:01:31 2023] [INFO] Import functions successfully.
+[Fri May  5 16:01:31 2023] [INFO] Getting realtime info by entering stock code 1684...
+[Fri May  5 16:01:31 2023] [INFO] Getting realtime info by entering stock code 1684 successfully.
+[Fri May  5 16:01:31 2023] [INPUT] Enter stock code or a command with '/':
+
+[Fri May  5 16:01:31 2023] [DEBUG] The input is: 1684
+[Fri May  5 16:01:31 2023] [PRINT] Getting stock infomation...
+[Fri May  5 16:01:31 2023] [PRINT] Arranging stock infomation...
+[Fri May  5 16:01:31 2023] [PRINT] Something went wrong,please check the log file.
+[Fri May  5 16:01:31 2023] [ERROR] The stock code 1684 is not exist.

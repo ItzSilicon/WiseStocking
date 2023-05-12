@@ -1,40 +1,57 @@
-import requests
-from bs4 import BeautifulSoup
-import twstock
-import random
-import yfinance as yf
-import json
-import glob
-import os
 from time import ctime
-
-
 class log:
+    
     def __init__(self):
         self.time = ctime()
-        self.fd = open("log.txt", "a", encoding="utf-8")
+        self.fd = open("log.log", "a", encoding="utf-8")
         
-    def write(self, msg):
+    def print(self, msg):
         print(msg)
-        self.fd.write(f"[PRINT] [{self.time}] {msg}\n")
+        self.fd.write(f"[{self.time}] [PRINT] {msg}\n")
         
     def error(self, msg):
-        self.write("Something went wrong,please check the log file.")
-        self.fd.write(f"[ERROR] [{self.time}] {msg}\n")
+        self.print("Something went wrong,please check the log file.")
+        self.fd.write(f"[{self.time}] [ERROR] {msg}\n")
         
     def info(self, msg):
-        self.fd.write(f"[INFO] [{self.time}] {msg}\n")
+        self.fd.write(f"[{self.time}] [INFO] {msg}\n")
         
     def debug(self, msg):
-        self.fd.write(f"[DEBUG] [{self.time}] {msg}\n")
+        self.fd.write(f"[{self.time}] [DEBUG] {msg}\n")
+        
+    def input(self, msg):
+        self.fd.write(f"[{self.time}] [INPUT] {msg}\n")
+        enter=input(msg)
+        self.debug(f"The input is: {enter}")
+        return enter
         
     def warning(self, msg):
-        self.fd.write(f"[WARNING] [{self.time}] {msg}\n")
+        self.fd.write(f"[{self.time}] [WARNING] {msg}\n")
         
     def __del__(self):
         self.fd.close()
 
 global logger
+logger=log()
+logger.info("Importing functions...")
+try:
+    import requests
+    from bs4 import BeautifulSoup
+    import twstock
+    import random
+    import yfinance as yf
+    import json
+    import glob
+    import os
+    logger.info("""The following modules are loaded successfully:requests,bs4,twstock,yfinance,json,glob,os""")
+except Exception as msg:
+    logger.error(msg)
+    exit(1)
+
+
+
+
+
 logger=log()
 def load_data_config():
     logger=log()
@@ -61,8 +78,13 @@ def get_web_content(URL):
     Returns:
         Response: 回傳網頁資料
     """
-    Content = requests.get(URL)
-    return Content.text
+    logger.info(f"Getting {URL}...")
+    try:
+        Content = requests.get(URL)
+        return Content.text
+    except Exception as msg:
+            logger.error(msg)
+    
 
 
 def get_stockweb_info(code):  # get stock info on tw.stock.yahoo
@@ -74,8 +96,13 @@ def get_stockweb_info(code):  # get stock info on tw.stock.yahoo
     Returns:
         str: 回傳該頁面資料
     """
-    stockweb = get_web_content(f'https://tw.stock.yahoo.com/quote/{code}')
-    return stockweb
+    logger.info(f"Getting stock info on tw.stock.yahoo...")
+    try:
+        stockweb = get_web_content(f'https://tw.stock.yahoo.com/quote/{code}')
+        return stockweb
+    except Exception as msg:
+        logger.error(msg)
+        return None
 
 
 def htmlize(web):  # Turn content into html format
@@ -88,35 +115,67 @@ def htmlize(web):  # Turn content into html format
     Returns:
         str: 格式化後的網頁原始碼
     """
-    return BeautifulSoup(web, 'html.parser')
+    try:
+        logger.info(f"Converting {web} to html format...")
+        soup = BeautifulSoup(web, 'html.parser')
+        return soup
+    except Exception as msg:
+        logger.error(msg)
+        return None
 
 
 def get_elm(web, elm):  # find element from html
-    return htmlize(web).find(elm)
+    """
+    查找指定元素
+
+    Args:
+        web (str): 網頁原始碼
+        elm (str): 指定的元素
+
+    Returns:
+        str: 指定的元素
+    """
+    try:
+        logger.info(f"Finding {elm}...")
+        htmlize(web)
+        return htmlize(web).find(elm).get_text()
+    except Exception as msg:
+        logger.error(msg)
+        return None     
 
 
-def get_realtime_price(id):  # get realtime info by entering stock code
-    return twstock.realtime.get(id)
+def get_realtime_price(id): 
+    logger.info(f"Getting realtime info by entering stock code {id}...")
+    
+    temp=twstock.realtime.get(id)
+    logger.info(f"Getting realtime info by entering stock code {id} successfully.")
+    return temp
 
 
 def randstock():  # generate random stock code
+    """"""
     code = random.randint(1011, 9999)
     code = str(code)
+    logger.info(f"Generating random stock code {code}")
     return code
 
 
 def getstockinfo(code):
+    logger.info(f"Getting stock info by entering stock code {code}...")
     stock = yf.Ticker(code)
     info = stock.info
     return (info)
 
 
 def update(code:str):
+    logger.info(f"Updating Stock Library...")
     try:
         data = getstockinfo(f"{code}.tw")
     except requests.exceptions.HTTPError as e:
+        logger.error(e)
         print(e)
         return None
+    logger.info(f"Updating Stock Library successfully.")
     S = json.dumps(data)
     with open(f"StockLibrary/{code}.json", "w",encoding="utf-8") as fd:
         fd.write(S)
@@ -124,6 +183,8 @@ def update(code:str):
 
 
 def importinfo():
+    """AI is creating summary for importinfo
+    """
     N = {}
     L = glob.glob(os.path.join("StockLibrary", "*"))
     for i in L:
@@ -143,3 +204,4 @@ def importinfo():
         except KeyError:
             continue
 
+logger.info("Import functions successfully.")

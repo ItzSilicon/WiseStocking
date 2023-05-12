@@ -1,4 +1,4 @@
-import Functions as Fx  #Import functions from Fuctions.py and define it Fx.
+import functions as Fx  #Import functions from Fuctions.py and define it Fx.
 import os  #Use of Windows Prompt
 
 
